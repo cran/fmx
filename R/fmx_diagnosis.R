@@ -55,7 +55,7 @@ KullbackLeibler_fmx <- function(object, data = object@data, ...) {
   # `px` is model-based; `py` is empirical
   px <- dfmx(data, dist = object, log = FALSE)
   py <- if (object@distname %in% c(distType('continuous'), distType('nonNegContinuous'))) {
-    object@epdf(data)
+    approxdens(data)(data)
   } else (tabulate(data, nbins = max(data)) / length(data))[data]
   if (any(!is.finite(px), !is.finite(py))) stop('`px` and `py` must have finite values.')
   px <- pmax.int(px, .Machine$double.xmin)

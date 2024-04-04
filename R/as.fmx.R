@@ -59,7 +59,7 @@ as.fmx.fitdist <- function(x, ...) {
   new(Class = 'fmx', 
       pars = matrix(x[['estimate']], nrow = 1L), 
       distname = x[['distname']],
-      data = data, epdf = approxdens(data), 
+      data = data, 
       vcov = if (length(x[['vcov']])) x[['vcov']] else array(dim = c(0, 0)))
 }
 
@@ -111,7 +111,7 @@ as.fmx.mixEM <- function(x, data = x[['x']], ...) {
   }, stop(x[['ft']], ' not supported yet'))
   new(Class = 'fmx', 
       pars = pars, w = x[['lambda']], distname = distname,
-      data = data, epdf = approxdens(data))
+      data = data)
 }
 
 
@@ -176,7 +176,6 @@ as.fmx.Skew.normal <- function(x, data, ...) {
   if (!missing(data)) {
     if (!length(data) || !is.numeric(data) || anyNA(data)) stop('illegal `data`')
     ret@data <- data
-    ret@epdf <- approxdens(data)
     ret@Kolmogorov <- Kolmogorov_fmx(ret)
     ret@CramerVonMises <- CramerVonMises_fmx(ret)
     ret@KullbackLeibler <- KullbackLeibler_fmx(ret)
@@ -241,7 +240,6 @@ as.fmx.Normal <- function(x, data, ...) {
   if (!missing(data)) {
     if (!length(data) || !is.numeric(data) || anyNA(data)) stop('illegal `data`')
     ret@data <- data
-    ret@epdf <- approxdens(data)
     ret@Kolmogorov <- Kolmogorov_fmx(ret)
     ret@CramerVonMises <- CramerVonMises_fmx(ret)
     ret@KullbackLeibler <- KullbackLeibler_fmx(ret)
@@ -319,7 +317,6 @@ as.fmx.Skew.t <- function(x, data, ...) {
   if (!missing(data)) {
     if (!length(data) || !is.numeric(data) || anyNA(data)) stop('illegal `data`')
     ret@data <- data
-    ret@epdf <- approxdens(data)
     ret@Kolmogorov <- Kolmogorov_fmx(ret)
     ret@CramerVonMises <- CramerVonMises_fmx(ret)
     ret@KullbackLeibler <- KullbackLeibler_fmx(ret)
@@ -381,5 +378,5 @@ as.fmx.t <- function(x, data, ...) {
   #), 
   #w = x[['pii']],
   #distname = 'norm', 
-  #data = data, epdf = approxdens(data))
+  #data = data)
 }

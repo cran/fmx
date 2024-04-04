@@ -30,8 +30,6 @@ or \code{'A'}, \code{'B'}, \code{'g'} and \code{'h'} for Tukey \eqn{g}-&-\eqn{h}
 
 \item{\code{data.name}}{(optional) \link[base]{character} scalar, a human-friendly name of the observations}
 
-\item{\code{epdf}}{(optional) empirical probability density \link[base]{function} returned by \link[stats]{approxfun}}
-
 \item{\code{vcov_internal}}{(optional) variance-covariance \link[base]{matrix} of the internal (i.e., unconstrained) estimates}
 
 \item{\code{vcov}}{(optional) variance-covariance \link[base]{matrix} of the mixture distribution (i.e., constrained) estimates}

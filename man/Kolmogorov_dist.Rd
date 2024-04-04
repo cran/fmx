@@ -49,6 +49,3 @@ suppressWarnings(ks.test(x2, y = pnbinom, size = 500, prob = .4)) # warning on t
 Kolmogorov_dist(x2, null = pnbinom, size = 500, prob = .4) # wont be the same
 
 }
-\seealso{
-\link[stats]{ks.test}
-}

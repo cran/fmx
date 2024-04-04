@@ -27,7 +27,7 @@ fmx2dbl(
 \item{...}{additional parameters, not currently used}
 }
 \value{
-Function \link{fmx2dbl} returns a \link[base]{numeric} \link[base]{vector}
+Function \link{fmx2dbl} returns a \link[base]{numeric} \link[base]{vector}.
 }
 \description{
 To convert the parameters of \linkS4class{fmx} object into unrestricted parameters.

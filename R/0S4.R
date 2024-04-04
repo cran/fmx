@@ -24,8 +24,6 @@
 #' 
 #' @slot data.name (optional) \link[base]{character} scalar, a human-friendly name of the observations
 #'
-#' @slot epdf (optional) empirical probability density \link[base]{function} returned by \link[stats]{approxfun}
-#' 
 #' @slot vcov_internal (optional) variance-covariance \link[base]{matrix} of the internal (i.e., unconstrained) estimates
 #' 
 #' @slot vcov (optional) variance-covariance \link[base]{matrix} of the mixture distribution (i.e., constrained) estimates
@@ -40,7 +38,6 @@ setClass(Class = 'fmx', slots = c(
   ### all below: optional
   data = 'numeric', 
   data.name = 'character',
-  epdf = 'function', 
   vcov_internal = 'matrix',
   vcov = 'matrix',
   ### all below: diagnostics
@@ -48,7 +45,6 @@ setClass(Class = 'fmx', slots = c(
   CramerVonMises = 'numeric',
   KullbackLeibler = 'numeric'
 ), prototype = prototype(
-  # epdf, # prototype of \link[base]{function} is `function() NULL`  
   w = 1 # for 1-component
 ), validity = function(object) {
   pars <- object@pars
@@ -70,9 +66,6 @@ setClass(Class = 'fmx', slots = c(
   # all below: optional
   if (length(object@data)) {
     if (anyNA(object@data)) stop('Observations in \'fmx\' must be free of NA_real_')
-    if (object@distname %in% c(distType('continuous'), distType('nonNegContinuous'))) {
-      if (!length(body(object@epdf))) stop('empirical pdf must be calculated from the data, for continuous mixture')
-    }
   }
 }) 
 

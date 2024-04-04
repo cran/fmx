@@ -37,9 +37,6 @@
 #' to speed up the calculation.}
 #' }
 #' 
-#' @seealso 
-#' \link[stats]{ks.test}
-#' 
 #' @examples 
 #' # from ?stats::ks.test
 #' x1 = rnorm(50)

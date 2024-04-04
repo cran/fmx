@@ -1,8 +1,4 @@
 
-
-
-
-
 #' @title Reparameterization of \linkS4class{fmx} Object
 #' 
 #' @description 
@@ -35,7 +31,7 @@
 #' for `'GH'`: `B -> log(B), h -> log(h)`
 #' 
 #' @returns 
-#' Function [fmx2dbl] returns a \link[base]{numeric} \link[base]{vector}
+#' Function [fmx2dbl] returns a \link[base]{numeric} \link[base]{vector}.
 #' 
 #' @seealso [dbl2fmx]
 #' @export
@@ -86,6 +82,7 @@ dbl2fmx <- function(x, K, distname, ...) {
   pm <- array(x[seq_len(n_dist)], dim = c(K, n_dist/K)) # not compute intensive..
   pm[,id] <- exp(pm[, (id <- dist_logtrans(distname)), drop = FALSE])
   if (K > 1L) pm[,1L] <- cumsum(c(pm[1L,1L], exp(pm[2:K,1L])))
+  colnames(pm) <- distArgs(distname = distname)
   list(pars = pm, w = w) # much faster than ?base::cbind
 }
 

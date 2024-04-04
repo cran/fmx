@@ -240,9 +240,20 @@ pfmx <- function(q, dist, distname = dist@distname, K = dim(pars)[1L], pars = di
 }
 
 
-# obtain the `interval` for ?TukeyGH77::vuniroot2 (and ?rstpm2::vuniroot)
-# @rdname fmx
-# @export
+#' @title Obtain `interval` for \link[TukeyGH77]{vuniroot2} for Function [qfmx] 
+#' 
+#' @param dist \linkS4class{fmx} object
+#' 
+#' @param p \link[base]{length}-2 \link[base]{numeric} \link[base]{vector}
+#' 
+#' @param distname,K,pars,w (optional) ignored if `dist` is provided
+#' 
+#' @param ... additional parameters, currently not used
+#' 
+#' @returns 
+#' Function [qfmx_interval] returns a \link[base]{length}-2 \link[base]{numeric} \link[base]{vector}.
+#' 
+#' @export
 qfmx_interval <- function(dist, p = c(1e-6, 1-1e-6), distname = dist@distname, K = dim(pars)[1L], pars = dist@pars, w = dist@w, ...) {
   qfun <- paste0('q', distname)
   y_ls <- lapply(seq_len(K), FUN = function(i) {# single component
@@ -273,26 +284,27 @@ qfmx <- function(p, dist, distname = dist@distname, K = dim(pars)[1L], pars = di
   if (log.p) p <- exp(p)
   
   if (K == 1L) {
-    switch(distname, 
-           gamma = return(qgamma(p, shape = pars[,1L], scale = pars[,1L], lower.tail = lower.tail, log.p = FALSE)),
-           genpois1 = {
-             # VGAM::qgenpois1 do not have arguments `lower.tail` and `log.p`
-             if (log.p) p <- exp(p)
-             if (!lower.tail) p <- 1 - p
-             return(qgenpois1(p, meanpar = pars[,1L], dispind = pars[,1L]))
-           },
-           nbinom = return(qnbinom(p, size = pars[,1L], prob = pars[,2L], lower.tail = lower.tail, log.p = FALSE)),
-           norm = return(qnorm(p, mean = pars[,1L], sd = pars[,2L], lower.tail = lower.tail, log.p = FALSE)),
-           GH = return(qGH(p, A = pars[,1L], B = pars[,2L], g = pars[,3L], h = pars[,4L], lower.tail = lower.tail, log.p = FALSE)),
-           sn = {
-             if (lower.tail) p <- 1 - p
-             return(qsn(p, xi = pars[,1L], omega = pars[,2L], alpha = pars[,3L]))
-           },
-           st = {
-             if (lower.tail) p <- 1 - p
-             return(qst(p, xi = pars[,1L], omega = pars[,2L], alpha = pars[,3L], nu = pars[,4L]))
-           },
-           stop('I do not have `q', distname, '` function'))
+    switch(
+      EXPR = distname, 
+      gamma = return(qgamma(p, shape = pars[,1L], scale = pars[,1L], lower.tail = lower.tail, log.p = FALSE)),
+      genpois1 = {
+        # VGAM::qgenpois1 do not have arguments `lower.tail` and `log.p`
+        if (log.p) p <- exp(p)
+        if (!lower.tail) p <- 1 - p
+        return(qgenpois1(p, meanpar = pars[,1L], dispind = pars[,1L]))
+      },
+      nbinom = return(qnbinom(p, size = pars[,1L], prob = pars[,2L], lower.tail = lower.tail, log.p = FALSE)),
+      norm = return(qnorm(p, mean = pars[,1L], sd = pars[,2L], lower.tail = lower.tail, log.p = FALSE)),
+      GH = return(qGH(p, A = pars[,1L], B = pars[,2L], g = pars[,3L], h = pars[,4L], lower.tail = lower.tail, log.p = FALSE)),
+      sn = {
+        if (lower.tail) p <- 1 - p
+        return(qsn(p, xi = pars[,1L], omega = pars[,2L], alpha = pars[,3L]))
+      },
+      st = {
+        if (lower.tail) p <- 1 - p
+        return(qst(p, xi = pars[,1L], omega = pars[,2L], alpha = pars[,3L], nu = pars[,4L]))
+      },
+      stop('I do not have `q', distname, '` function'))
   }
   
   t_w <- t.default(w)

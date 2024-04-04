@@ -39,6 +39,7 @@ mixEM_pars <- function(object) {
 #' Function [logLik.mixEM] returns a \link[stats]{logLik} object.
 #' 
 #' @importFrom stats logLik 
+#' @export logLik.mixEM
 #' @export
 logLik.mixEM <- function(object, ...) {
   val <- object[['loglik']]
@@ -82,6 +83,7 @@ logLik.mixEM <- function(object, ...) {
 #' @seealso 
 #' \link[base]{sort}
 #' 
+#' @export sort.mixEM
 #' @export
 sort.mixEM <- function(x, decreasing = FALSE, ...) {
   ret <- x
