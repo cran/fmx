@@ -4,13 +4,23 @@
 \name{fmx-package}
 \alias{fmx-package}
 \title{Finite Mixture Parametrization}
-\value{
-Returns of each function will be documented separately.
-}
 \description{
-..
+A parametrization framework for finite mixture
+distribution using S4 objects.
+
+Density, cumulative density, quantile and simulation
+functions are defined.
+
+Currently normal, Tukey \eqn{g}-&-\eqn{h}, skew-normal and skew-\eqn{t}
+distributions are well tested. The gamma, negative
+binomial distributions are being tested.
 }
 \author{
-Tingting Zhan
+\strong{Maintainer}: Tingting Zhan \email{tingtingzhan@gmail.com} (\href{https://orcid.org/0000-0001-9971-4844}{ORCID}) [copyright holder]
+
+Other contributors:
+\itemize{
+  \item Inna Chervoneva \email{Inna.Chervoneva@jefferson.edu} (\href{https://orcid.org/0000-0002-9104-4505}{ORCID}) [contributor, copyright holder]
 }
-\keyword{internal}
+
+}

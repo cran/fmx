@@ -1,7 +1,7 @@
-67d3a54574b36d10740fe60bb59b0367 *DESCRIPTION
-fd873b138601df6762834b60d8c2a090 *NAMESPACE
-e49abcb1921c2ac3f400e056150c5aaa *NEWS.md
-7a08dd08e7596e25701549d71e605dc7 *R/0PACKAGE.R
+7c6cddac3573d80d2eff3348b25020aa *DESCRIPTION
+0afacdcd6a4f00a6973b3cd151bb45b3 *NAMESPACE
+a05d5589fe8572b354a85a380dd8ae2c *NEWS.md
+c6a5cf831233a16e128e06caf0b46b41 *R/0PACKAGE.R
 529be9ffc1bab22926062d5951f9be08 *R/0S4.R
 dcf3e0b4d1181cf46e2859e5e50506e6 *R/Kolmogorov_dist.R
 c51247ad846e167750d3920c35d790c1 *R/MaP.R
@@ -10,7 +10,7 @@ f69e3e17f26d71f8b032233f6e1d6dad *R/approxdens.R
 e3109551e313356b7d20ca6614ad3540 *R/create_fmx.R
 0bbf52c3c79e32afa6932400b6d3194f *R/dist_ext.R
 0ac484c009e31fa8fb85c7f18e868060 *R/fitdistrplus.R
-838e1ac8d51352025a04c97dc94fba05 *R/fmx.R
+45db7a981ad8ee87868a716d5f3a0ba5 *R/fmx.R
 8249109cd44cee0e1dc0beb3daac786e *R/fmx_constraint.R
 519e0cbe18987569f5afc8427c5704fc *R/fmx_diagnosis.R
 01b58de3b824e2daf6b5df3bfe5c973a *R/fmx_repar.R
@@ -18,6 +18,7 @@ e3109551e313356b7d20ca6614ad3540 *R/create_fmx.R
 45be5e557b5bc64c3146c6a75a63aa6f *R/mixsmsn.R
 f912b15b4f1762900cb2ec48875017a5 *R/mixtools.R
 f78975f92dd78f7f2ab2f73cb3fcfd8e *R/mlogis.R
+be17813c976464ab95242c8bc8f78a33 *R/moment.R
 3e73097e076889c2cef1eb695b22da75 *man/Kolmogorov_dist.Rd
 cf5b5acf2d68cfd620d1bfe8b7d88db6 *man/MaP.Rd
 3b78eef62540c42ef5e111756d0d0dee *man/approxdens.Rd
@@ -31,12 +32,12 @@ c77dcb240cce318c478f0e8f7aa9e434 *man/as.fmx.t.Rd
 4d551d53c6262e03b1555d4dce8e5f5e *man/coef.fmx.Rd
 4043af49b7a18e3196406cee64e3177d *man/confint.fmx.Rd
 8c1739dc4c64ed4b709464f42a201ebf *man/dbl2fmx.Rd
-866ff36308a0616ed558cf7ee0551fb8 *man/dfmx.Rd
+9e9b33895973d60de2a3e023ac7d199c *man/dfmx.Rd
 50e9e4905e901f9aba9bba6f8757c9b4 *man/distArgs.Rd
 58445bf74cd23d9c9c209c6aa9b12015 *man/distType.Rd
 2bdfccb8986e106f5ae27e54d238d83d *man/dist_logtrans.Rd
 cca4281b24b8d0c9f74d024d1dca177e *man/fmx-class.Rd
-750b6ae6ce046f3f27a9931d825c5233 *man/fmx-package.Rd
+4cfa198b1dd0895e25679051e7934360 *man/fmx-package.Rd
 794c11eb961f04eb887f10d67055e8e2 *man/fmx.Rd
 1c3a3d23505d476ee1d14d57c64a3aa0 *man/fmx2dbl.Rd
 2e5892ba44f17ddd9e432860089d9745 *man/fmx_constraint.Rd
@@ -47,6 +48,8 @@ fbae0a79696e1454369f79742654eecf *man/logLik.fmx.Rd
 09e3984c8bd3374be78b0aefb2bc95ad *man/logLik.mixEM.Rd
 26e852574bc29dbc1282fabe56eae8a2 *man/mixEM_pars.Rd
 96b2d29254a139833f03ac254c35e261 *man/mlogis.Rd
+7a07cee11413563f79245cda9ffaa86b *man/moment2fmx.Rd
+0a19212bd97c2bf9c9e344704c234591 *man/moment_fmx.Rd
 9ecaa0dbe94d4b26b170d76803d635b4 *man/nobs.fitdist.Rd
 70dd218a520072b672b7804e8c1ab731 *man/npar.fmx.Rd
 6eefaa1d187eefe25235dd0a500b5cc3 *man/print.fmx.Rd

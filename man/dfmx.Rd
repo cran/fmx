@@ -149,4 +149,18 @@ library(ggplot2)
 p + theme(legend.position = 'none')
 
 
+# to use [rfmx] without \pkg{fmx}
+(d = fmx(distname = 'GH', A = c(-1,1), B = c(.9,1.1), g = c(.3,-.2), h = c(.1,.05), w = c(2,3)))
+d@pars
+set.seed(14123); x = rfmx(n = 1e3L, dist = d)
+set.seed(14123); x_raw = rfmx(n = 1e3L,
+ distname = 'GH', K = 2L,
+ pars = rbind(
+  c(A = -1, B = .9, g = .3, h = .1),
+  c(A = 1, B = 1.1, g = -.2, h = .05)
+ ), 
+ w = c(.4, .6)
+)
+stopifnot(identical(x, x_raw))
+
 }
