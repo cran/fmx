@@ -12,8 +12,9 @@
 \item{...}{additional parameters, not currently in use}
 }
 \value{
-Function \link{print.fmx} returns the input \linkS4class{fmx} object invisibly.
+Function \code{\link[=print.fmx]{print.fmx()}} returns the input \linkS4class{fmx} object invisibly.
 }
 \description{
 ..
 }
+\keyword{internal}

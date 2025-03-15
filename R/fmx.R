@@ -30,15 +30,15 @@
 #' 
 #' @details 
 #' 
-#' A computational challenge in function [dfmx] is when mixture density is very close to 0,
+#' A computational challenge in function [dfmx()] is when mixture density is very close to 0,
 #' which happens when the per-component log densities are negative with big absolute values.  
 #' In such case, we cannot compute the log mixture densities (i.e., `-Inf`), 
-#' for the log-likelihood using function [logLik.fmx].
+#' for the log-likelihood using function [logLik.fmx()].
 #' Our solution is to replace these `-Inf` log mixture densities by 
 #' the weighted average (using the mixing proportions of `dist`) 
 #' of the per-component log densities.
 #' 
-#' Function [qfmx] gives the quantile function, by numerically solving [pfmx].
+#' Function [qfmx()] gives the quantile function, by numerically solving [pfmx].
 #' One major challenge when dealing with the finite mixture of Tukey \eqn{g}-&-\eqn{h} family distribution
 #' is that Brent–Dekker's method needs to be performed in both \link[TukeyGH77]{pGH} and [qfmx] functions, 
 #' i.e. *two layers* of root-finding algorithm.
@@ -46,13 +46,13 @@
 #' 
 #' @returns 
 #' 
-#' Function [dfmx] returns a \link[base]{numeric} \link[base]{vector} of probability density values of an \linkS4class{fmx} object at specified quantiles `x`.
+#' Function [dfmx()] returns a \link[base]{numeric} \link[base]{vector} of probability density values of an \linkS4class{fmx} object at specified quantiles `x`.
 #' 
-#' Function [pfmx] returns a \link[base]{numeric} \link[base]{vector} of cumulative probability values of an \linkS4class{fmx} object at specified quantiles `q`.
+#' Function [pfmx()] returns a \link[base]{numeric} \link[base]{vector} of cumulative probability values of an \linkS4class{fmx} object at specified quantiles `q`.
 #' 
-#' Function [qfmx] returns an unnamed \link[base]{numeric} \link[base]{vector} of quantiles of an \linkS4class{fmx} object, based on specified cumulative probabilities `p`.
+#' Function [qfmx()] returns an unnamed \link[base]{numeric} \link[base]{vector} of quantiles of an \linkS4class{fmx} object, based on specified cumulative probabilities `p`.
 #' 
-#' Function [rfmx] generates random deviates of an \linkS4class{fmx} object.
+#' Function [rfmx()] generates random deviates of an \linkS4class{fmx} object.
 #' 
 #' @note
 #' Function \link[stats]{qnorm} returns an unnamed \link[base]{vector} of quantiles, 
@@ -240,7 +240,7 @@ pfmx <- function(q, dist, distname = dist@distname, K = dim(pars)[1L], pars = di
 }
 
 
-#' @title Obtain `interval` for \link[TukeyGH77]{vuniroot2} for Function [qfmx] 
+#' @title Obtain `interval` for \link[TukeyGH77]{vuniroot2} for Function [qfmx()] 
 #' 
 #' @param dist \linkS4class{fmx} object
 #' 
@@ -251,8 +251,9 @@ pfmx <- function(q, dist, distname = dist@distname, K = dim(pars)[1L], pars = di
 #' @param ... additional parameters, currently not used
 #' 
 #' @returns 
-#' Function [qfmx_interval] returns a \link[base]{length}-2 \link[base]{numeric} \link[base]{vector}.
+#' Function [qfmx_interval()] returns a \link[base]{length}-2 \link[base]{numeric} \link[base]{vector}.
 #' 
+#' @keywords internal
 #' @export
 qfmx_interval <- function(dist, p = c(1e-6, 1-1e-6), distname = dist@distname, K = dim(pars)[1L], pars = dist@pars, w = dist@w, ...) {
   qfun <- paste0('q', distname)

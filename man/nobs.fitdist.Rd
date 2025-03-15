@@ -12,8 +12,9 @@
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \link{nobs.fitdist} returns an \link[base]{integer} scalar
+Function \code{\link[=nobs.fitdist]{nobs.fitdist()}} returns an \link[base]{integer} scalar
 }
 \description{
 ..
 }
+\keyword{internal}

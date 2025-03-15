@@ -1,6 +1,6 @@
 
 ######################################
-## Modify in tzhVanilla package!!
+## Modify in tzhInternal package!!
 ######################################
 
 
@@ -21,10 +21,10 @@
 #' @param ... additional arguments of `null`
 #' 
 #' @returns 
-#' Function [Kolmogorov_dist] returns a \link[base]{numeric} scalar.
+#' Function [Kolmogorov_dist()] returns a \link[base]{numeric} scalar.
 #' 
 #' @details 
-#' Function [Kolmogorov_dist] is different from \link[stats]{ks.test} in the
+#' Function [Kolmogorov_dist()] is different from \link[stats]{ks.test} in the
 #' following aspects
 #' \itemize{
 #' \item {Ties in observations are supported.  

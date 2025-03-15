@@ -17,7 +17,7 @@
 #' so that we could take advantage of all methods defined for \linkS4class{fmx} objects.
 #' 
 #' @returns
-#' S3 generic function [as.fmx] returns an \linkS4class{fmx} object.
+#' S3 generic function [as.fmx()] returns an \linkS4class{fmx} object.
 #' 
 #' @export
 as.fmx <- function(x, ...) UseMethod('as.fmx')
@@ -38,7 +38,7 @@ as.fmx.fmx <- function(x, ...) x
 #' @param ... ..
 #' 
 #' @returns 
-#' Function [as.fmx.fitdist] returns an \linkS4class{fmx} object.
+#' Function [as.fmx.fitdist()] returns an \linkS4class{fmx} object.
 #' 
 #' @examples
 #' library(fitdistrplus)
@@ -85,7 +85,7 @@ as.fmx.fitdist <- function(x, ...) {
 #' \link[mixtools]{plot.mixEM} not plot \link[mixtools]{gammamixEM} returns, as of 2022-09-19.
 #' 
 #' @returns 
-#' Function [as.fmx.mixEM] returns an \linkS4class{fmx} object.
+#' Function [as.fmx.mixEM()] returns an \linkS4class{fmx} object.
 #' 
 #' @examples 
 #' library(mixtools)
@@ -140,7 +140,7 @@ as.fmx.mixEM <- function(x, data = x[['x']], ...) {
 #' \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
 #' 
 #' @returns 
-#' Function [as.fmx.Skew.normal] returns an \linkS4class{fmx} object.
+#' Function [as.fmx.Skew.normal()] returns an \linkS4class{fmx} object.
 #' 
 #' @examples 
 #' library(mixsmsn)
@@ -206,7 +206,7 @@ as.fmx.Skew.normal <- function(x, data, ...) {
 #' \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
 #' 
 #' @returns 
-#' Function [as.fmx.Normal] returns an \linkS4class{fmx} object.
+#' Function [as.fmx.Normal()] returns an \linkS4class{fmx} object.
 #' 
 #' @examples 
 #' library(mixsmsn)
@@ -272,7 +272,7 @@ as.fmx.Normal <- function(x, data, ...) {
 #' \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
 #' 
 #' @returns 
-#' Function [as.fmx.Skew.t] returns an \linkS4class{fmx} object.
+#' Function [as.fmx.Skew.t()] returns an \linkS4class{fmx} object.
 #' 
 #' @examples 
 #' \donttest{
@@ -348,7 +348,7 @@ as.fmx.Skew.t <- function(x, data, ...) {
 #' \link[mixsmsn]{smsn.mix} does not offer a parameter to keep the input data, as of 2021-10-06.
 #' 
 #' @returns 
-#' Function [as.fmx.t] has not been completed yet
+#' Function [as.fmx.t()] has not been completed yet
 #' 
 #' @examples 
 #' 

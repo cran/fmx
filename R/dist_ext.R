@@ -9,8 +9,9 @@
 #' @param type \link[base]{character} scalar
 #' 
 #' @returns 
-#' Function [distType] returns a \link[base]{character} \link[base]{vector}. 
+#' Function [distType()] returns a \link[base]{character} \link[base]{vector}. 
 #' 
+#' @keywords internal
 #' @export
 distType <- function(type = c('discrete', 'nonNegContinuous', 'continuous')) {
   switch(match.arg(type), discrete = c(
@@ -54,11 +55,12 @@ distType <- function(type = c('discrete', 'nonNegContinuous', 'continuous')) {
 #' @param distname \link[base]{character} scalar, name of distribution
 #' 
 #' @returns 
-#' Function [distArgs] returns a \link[base]{character} \link[base]{vector}.
+#' Function [distArgs()] returns a \link[base]{character} \link[base]{vector}.
 #' 
 #' @seealso 
 #' \link[methods]{formalArgs}
 #' 
+#' @keywords internal
 #' @export
 distArgs <- function(distname) {
   switch(distname, 
@@ -85,8 +87,9 @@ distArgs <- function(distname) {
 #' @param distname \link[base]{character} scalar, name of distribution
 #' 
 #' @returns 
-#' Function [dist_logtrans] returns an \link[base]{integer} scalar
+#' Function [dist_logtrans()] returns an \link[base]{integer} scalar
 #' 
+#' @keywords internal
 #' @export
 dist_logtrans <- function(distname) {
   switch(distname, norm = {

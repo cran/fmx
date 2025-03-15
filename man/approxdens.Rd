@@ -12,7 +12,7 @@ approxdens(x, ...)
 \item{...}{additional parameters of \link[stats]{density.default}}
 }
 \value{
-Function \link{approxdens} returns a \link[base]{function}.
+Function \code{\link[=approxdens]{approxdens()}} returns a \link[base]{function}.
 }
 \description{
 ..

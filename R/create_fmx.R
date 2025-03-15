@@ -15,7 +15,7 @@
 #' or \link[stats]{dnorm} for the names and default values of normal distribution parameters.
 #' 
 #' @returns 
-#' Function [fmx] returns an \linkS4class{fmx} object.
+#' Function [fmx()] returns an \linkS4class{fmx} object.
 #' 
 #' @examples 
 #' 

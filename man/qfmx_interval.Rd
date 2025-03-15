@@ -2,7 +2,7 @@
 % Please edit documentation in R/fmx.R
 \name{qfmx_interval}
 \alias{qfmx_interval}
-\title{Obtain \code{interval} for \link[TukeyGH77]{vuniroot2} for Function \link{qfmx}}
+\title{Obtain \code{interval} for \link[TukeyGH77]{vuniroot2} for Function \code{\link[=qfmx]{qfmx()}}}
 \usage{
 qfmx_interval(
   dist,
@@ -24,8 +24,9 @@ qfmx_interval(
 \item{...}{additional parameters, currently not used}
 }
 \value{
-Function \link{qfmx_interval} returns a \link[base]{length}-2 \link[base]{numeric} \link[base]{vector}.
+Function \code{\link[=qfmx_interval]{qfmx_interval()}} returns a \link[base]{length}-2 \link[base]{numeric} \link[base]{vector}.
 }
 \description{
-Obtain \code{interval} for \link[TukeyGH77]{vuniroot2} for Function \link{qfmx}
+Obtain \code{interval} for \link[TukeyGH77]{vuniroot2} for Function \code{\link[=qfmx]{qfmx()}}
 }
+\keyword{internal}

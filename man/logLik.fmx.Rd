@@ -14,14 +14,15 @@
 \item{...}{place holder for S3 naming convention}
 }
 \value{
-Function \link{logLik.fmx} returns a \link[stats]{logLik} object with
+Function \code{\link[=logLik.fmx]{logLik.fmx()}} returns a \link[stats]{logLik} object with
 an additional attribute \code{attr(,'logl')}.
 }
 \description{
 ..
 }
 \details{
-Function \link{logLik.fmx} returns a \link[stats]{logLik} object indicating the log-likelihood.
+Function \code{\link[=logLik.fmx]{logLik.fmx()}} returns a \link[stats]{logLik} object indicating the log-likelihood.
 An additional attribute \code{attr(,'logl')} indicates the point-wise log-likelihood,
 to be use in Vuong's closeness test.
 }
+\keyword{internal}

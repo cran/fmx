@@ -10,7 +10,7 @@ distArgs(distname)
 \item{distname}{\link[base]{character} scalar, name of distribution}
 }
 \value{
-Function \link{distArgs} returns a \link[base]{character} \link[base]{vector}.
+Function \code{\link[=distArgs]{distArgs()}} returns a \link[base]{character} \link[base]{vector}.
 }
 \description{
 To obtain the name(s) of distribution parameter(s).
@@ -18,3 +18,4 @@ To obtain the name(s) of distribution parameter(s).
 \seealso{
 \link[methods]{formalArgs}
 }
+\keyword{internal}

@@ -14,7 +14,7 @@ MaP(x, dist, ...)
 \item{...}{..}
 }
 \value{
-Function \link{MaP} returns an \link[base]{integer} \link[base]{vector}.
+Function \code{\link[=MaP]{MaP()}} returns an \link[base]{integer} \link[base]{vector}.
 }
 \description{
 ..
@@ -28,3 +28,4 @@ ggplot() + geom_function(fun = dfmx, args = list(dist = m)) +
   labs(color = 'Maximum a Posteriori\nClustering')
 
 }
+\keyword{internal}

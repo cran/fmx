@@ -12,7 +12,7 @@
 #' @param ... ..
 #' 
 #' @returns 
-#' Function [MaP] returns an \link[base]{integer} \link[base]{vector}.
+#' Function [MaP()] returns an \link[base]{integer} \link[base]{vector}.
 #' 
 #' @examples 
 #' x = rnorm(1e2L, sd = 2)
@@ -22,6 +22,7 @@
 #'   geom_point(mapping = aes(x = x, y = .05, color = factor(MaP(x, dist = m)))) + 
 #'   labs(color = 'Maximum a Posteriori\nClustering')
 #' 
+#' @keywords internal
 #' @export
 MaP <- function(x, dist, ...) {
   d <- dfmx(x = x, dist = dist)

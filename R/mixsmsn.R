@@ -20,17 +20,18 @@
 #' 
 #' @returns 
 #' 
-#' Function [sort.Normal] returns a `'Normal'` object.
+#' Function [sort.Normal()] returns a `'Normal'` object.
 #' 
-#' Function [sort.Skew.normal] returns a `'Skew.normal'` object.
+#' Function [sort.Skew.normal()] returns a `'Skew.normal'` object.
 #' 
-#' Function [sort.Skew.t] returns a `'Skew.t'` object.
+#' Function [sort.Skew.t()] returns a `'Skew.t'` object.
 #' 
 #' 
 #' @seealso 
 #' \link[base]{sort}
 #' 
 #' @name sort_mixsmsn
+#' @keywords internal
 #' @method sort Skew.normal
 #' @export sort.Skew.normal
 #' @export

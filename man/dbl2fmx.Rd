@@ -16,7 +16,7 @@ dbl2fmx(x, K, distname, ...)
 \item{...}{additional parameters, not currently used}
 }
 \value{
-Function \link{dbl2fmx} returns a \link[base]{list} with two elements \verb{$pars} and \verb{$w}
+Function \code{\link[=dbl2fmx]{dbl2fmx()}} returns a \link[base]{list} with two elements \verb{$pars} and \verb{$w}
 }
 \description{
 ..
@@ -24,3 +24,4 @@ Function \link{dbl2fmx} returns a \link[base]{list} with two elements \verb{$par
 \details{
 Only used in downstream function \code{QuantileGH::QLMDe} and unexported function \code{QuantileGH:::qfmx_gr}, not compute intensive.
 }
+\keyword{internal}

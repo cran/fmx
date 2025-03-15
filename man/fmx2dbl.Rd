@@ -27,7 +27,7 @@ fmx2dbl(
 \item{...}{additional parameters, not currently used}
 }
 \value{
-Function \link{fmx2dbl} returns a \link[base]{numeric} \link[base]{vector}.
+Function \code{\link[=fmx2dbl]{fmx2dbl()}} returns a \link[base]{numeric} \link[base]{vector}.
 }
 \description{
 To convert the parameters of \linkS4class{fmx} object into unrestricted parameters.
@@ -46,5 +46,6 @@ For \code{'norm'}: \code{sd -> log(sd)}
 for \code{'GH'}: \verb{B -> log(B), h -> log(h)}
 }
 \seealso{
-\link{dbl2fmx}
+\code{\link[=dbl2fmx]{dbl2fmx()}}
 }
+\keyword{internal}

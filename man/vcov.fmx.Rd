@@ -16,15 +16,16 @@ for the internal/unconstrained parameters (\code{TRUE}).}
 \item{...}{place holder for S3 naming convention}
 }
 \value{
-Function \link{vcov.fmx} returns a \link[base]{matrix}.
+Function \code{\link[=vcov.fmx]{vcov.fmx()}} returns a \link[base]{matrix}.
 }
 \description{
 ..
 }
 \details{
-Function \link{vcov.fmx} returns
+Function \code{\link[=vcov.fmx]{vcov.fmx()}} returns
 the approximate asymptotic variance-covariance \link[base]{matrix} of the user-friendly parameters via delta-method (\code{parm = 'user'}),
 or the asymptotic variance-covariance matrix of the internal/unconstrained parameters (\code{parm = 'internal'}).
 When the distribution has constraints on one or more parameters,
-function \link{vcov.fmx} does not return the variance/covariance involving the constrained parameters.
+function \code{\link[=vcov.fmx]{vcov.fmx()}} does not return the variance/covariance involving the constrained parameters.
 }
+\keyword{internal}

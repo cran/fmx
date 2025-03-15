@@ -17,7 +17,7 @@ See function \link[TukeyGH77]{dGH} for the names and default values of Tukey \eq
 or \link[stats]{dnorm} for the names and default values of normal distribution parameters.}
 }
 \value{
-Function \link{fmx} returns an \linkS4class{fmx} object.
+Function \code{\link[=fmx]{fmx()}} returns an \linkS4class{fmx} object.
 }
 \description{
 To create \linkS4class{fmx} object for finite mixture distribution.

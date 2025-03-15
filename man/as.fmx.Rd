@@ -12,7 +12,7 @@ as.fmx(x, ...)
 \item{...}{additional parameters, see \strong{Arguments} in individual S3 dispatches}
 }
 \value{
-S3 generic function \link{as.fmx} returns an \linkS4class{fmx} object.
+S3 generic function \code{\link[=as.fmx]{as.fmx()}} returns an \linkS4class{fmx} object.
 }
 \description{
 Turn various objects created in other R packages

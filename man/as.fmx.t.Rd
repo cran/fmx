@@ -16,7 +16,7 @@ returned from \link[mixsmsn]{smsn.mix} with parameter
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \link{as.fmx.t} has not been completed yet
+Function \code{\link[=as.fmx.t]{as.fmx.t()}} has not been completed yet
 }
 \description{
 To convert \code{t} object (from package \CRANpkg{mixsmsn})

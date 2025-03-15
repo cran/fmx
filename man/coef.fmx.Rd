@@ -16,14 +16,15 @@ for the internal/unconstrained parameters (\code{TRUE}).}
 \item{...}{place holder for S3 naming convention}
 }
 \value{
-Function \link{coef.fmx} returns a \link[base]{numeric} \link[base]{vector}.
+Function \code{\link[=coef.fmx]{coef.fmx()}} returns a \link[base]{numeric} \link[base]{vector}.
 }
 \description{
 ..
 }
 \details{
-Function \link{coef.fmx} returns the estimates of the user-friendly parameters (\code{parm = 'user'}),
+Function \code{\link[=coef.fmx]{coef.fmx()}} returns the estimates of the user-friendly parameters (\code{parm = 'user'}),
 or the internal/unconstrained parameters (\code{parm = 'internal'}).
 When the distribution has constraints on one or more parameters,
-function \link{coef.fmx} does not return the estimates (which is constant \code{0}) of the constrained parameters.
+function \code{\link[=coef.fmx]{coef.fmx()}} does not return the estimates (which is constant \code{0}) of the constrained parameters.
 }
+\keyword{internal}

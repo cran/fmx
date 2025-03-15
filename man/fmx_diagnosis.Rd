@@ -22,14 +22,14 @@ Default is \code{object@data}, the data used for estimation.}
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Functions \link{Kolmogorov_fmx}, \link{KullbackLeibler_fmx}, \link{CramerVonMises_fmx}
+Functions \code{\link[=Kolmogorov_fmx]{Kolmogorov_fmx()}}, \code{\link[=KullbackLeibler_fmx]{KullbackLeibler_fmx()}}, \code{\link[=CramerVonMises_fmx]{CramerVonMises_fmx()}}
 all return \link[base]{numeric} scalars.
 }
 \description{
 Diagnoses for \linkS4class{fmx} estimates.
 }
 \details{
-Function \link{Kolmogorov_fmx} calculates Kolmogorov distance.
+Function \code{\link[=Kolmogorov_fmx]{Kolmogorov_fmx()}} calculates Kolmogorov distance.
 
 Function \link{KullbackLeibler_fmx} calculates Kullback-Leibler divergence.
 The R code is adapted from \code{LaplacesDemon::KLD}.
@@ -40,3 +40,4 @@ Function \link{CramerVonMises_fmx} calculates Cramer-von Mises quadratic distanc
 \seealso{
 \code{dgof::cvmf.test}
 }
+\keyword{internal}

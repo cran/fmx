@@ -12,7 +12,7 @@
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \link{logLik.fitdist} returns a \link[stats]{logLik} object, which
+Function \code{\link[=logLik.fitdist]{logLik.fitdist()}} returns a \link[stats]{logLik} object, which
 could be further used by \link[stats]{AIC} and \link[stats]{BIC}.
 
 (I have written to the authors)
@@ -25,3 +25,4 @@ Output of \link[fitdistrplus]{fitdist} has elements \verb{$loglik}, \verb{$aic} 
 but they are simply \link[base]{numeric} scalars.
 \code{fitdistrplus:::logLik.fitdist} simply returns these elements.
 }
+\keyword{internal}

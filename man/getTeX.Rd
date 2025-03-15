@@ -13,7 +13,7 @@ getTeX(dist, print_K = FALSE)
 Default \code{FALSE}.}
 }
 \value{
-Function \link{getTeX} returns a \link[base]{character} scalar
+Function \code{\link[=getTeX]{getTeX()}} returns a \link[base]{character} scalar
 (of TeX expression) of the constraint,
 primarily intended for end-users in plots.
 }
@@ -31,3 +31,4 @@ getTeX(d1)
 getTeX(d2)
 
 }
+\keyword{internal}

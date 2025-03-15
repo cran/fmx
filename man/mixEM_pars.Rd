@@ -11,7 +11,7 @@ mixEM_pars(object)
 \link[mixtools]{normalmixEM} and \link[mixtools]{gammamixEM} are supported}
 }
 \value{
-Function \link{mixEM_pars} returns a \link[base]{character} \link[base]{vector}
+Function \code{\link[=mixEM_pars]{mixEM_pars()}} returns a \link[base]{character} \link[base]{vector}
 }
 \description{
 Names of distribution parameters of \code{'mixEM'} object, based on \CRANpkg{mixtools} 2020-02-05.
@@ -19,3 +19,4 @@ Names of distribution parameters of \code{'mixEM'} object, based on \CRANpkg{mix
 \seealso{
 \link[mixtools]{normalmixEM} \link[mixtools]{gammamixEM}
 }
+\keyword{internal}

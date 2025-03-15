@@ -16,3 +16,4 @@ does not have a returned value.
 \description{
 Print the parameters of an \linkS4class{fmx} object and plot its density curves.
 }
+\keyword{internal}

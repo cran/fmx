@@ -15,7 +15,7 @@ be increasing (\code{FALSE}, default) or decreasing (\code{TRUE})?}
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \link{sort.mixEM} returns a \code{'mixEM'} object.
+Function \code{\link[=sort.mixEM]{sort.mixEM()}} returns a \code{'mixEM'} object.
 }
 \description{
 To sort a \code{'mixEM'} object by its first parameters, i.e.,
@@ -27,3 +27,4 @@ To sort a \code{'mixEM'} object by its first parameters, i.e.,
 \seealso{
 \link[base]{sort}
 }
+\keyword{internal}

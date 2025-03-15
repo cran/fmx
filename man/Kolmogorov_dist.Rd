@@ -17,14 +17,14 @@ alternative hypothesis, either \code{'two.sided'} (default), \code{'less'}, or \
 \item{...}{additional arguments of \code{null}}
 }
 \value{
-Function \link{Kolmogorov_dist} returns a \link[base]{numeric} scalar.
+Function \code{\link[=Kolmogorov_dist]{Kolmogorov_dist()}} returns a \link[base]{numeric} scalar.
 }
 \description{
 To calculate the one-sample Kolmogorov distance between observations and
 a distribution.
 }
 \details{
-Function \link{Kolmogorov_dist} is different from \link[stats]{ks.test} in the
+Function \code{\link[=Kolmogorov_dist]{Kolmogorov_dist()}} is different from \link[stats]{ks.test} in the
 following aspects
 \itemize{
 \item {Ties in observations are supported.

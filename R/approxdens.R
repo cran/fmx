@@ -1,6 +1,6 @@
 
 ######################################
-## Modify in tzhVanilla package!!
+## Modify in tzhInternal package!!
 ######################################
 
 
@@ -20,7 +20,7 @@
 #' another 'layer' of \link[stats]{approxfun}
 #' 
 #' @returns 
-#' Function [approxdens] returns a \link[base]{function}.
+#' Function [approxdens()] returns a \link[base]{function}.
 #' 
 #' @examples 
 #' x = rnorm(1e3L)

@@ -1,7 +1,7 @@
 
 
 ######################################
-## Modify in tzhVanilla package!!
+## Modify in tzhInternal package!!
 ######################################
 
 

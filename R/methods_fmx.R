@@ -12,6 +12,7 @@
 #' The \link[methods]{show} method for \linkS4class{fmx} object 
 #' does not have a returned value.
 #' 
+#' @keywords internal
 #' @importFrom methods show signature
 #' @export
 setMethod(f = show, signature = signature(object = 'fmx'), definition = function(object) {
@@ -30,8 +31,9 @@ setMethod(f = show, signature = signature(object = 'fmx'), definition = function
 #' @param ... additional parameters, not currently in use
 #' 
 #' @returns 
-#' Function [print.fmx] returns the input \linkS4class{fmx} object invisibly.
+#' Function [print.fmx()] returns the input \linkS4class{fmx} object invisibly.
 #' 
+#' @keywords internal
 #' @export print.fmx
 #' @export
 print.fmx <- function(x, ...) {
@@ -94,6 +96,7 @@ print.fmx <- function(x, ...) {
 #' (d = fmx('norm', mean = c(1, 4, 7), w = c(1, 1, 1)))
 #' d[1:2]
 #' 
+#' @keywords internal
 #' @export
 setMethod(`[`, signature(x = 'fmx', i = 'ANY'), definition = function(x, i) {
   if (length(x@data)) message('Subset the estimates and drop `@data` etc.')
@@ -131,14 +134,15 @@ setMethod(`[`, signature(x = 'fmx', i = 'ANY'), definition = function(x, i) {
 #' 
 #' @details 
 #' 
-#' [confint.fmx] returns the Wald-type confidence intervals based on the user-friendly parameters (`parm = 'user'`),
+#' Function [confint.fmx()] returns the Wald-type confidence intervals based on the user-friendly parameters (`parm = 'user'`),
 #'  or the internal/unconstrained parameters (`parm = 'internal'`).
 #' When the distribution has constraints on one or more parameters, 
-#' function [confint.fmx] does not return the confident intervals of for the constrained parameters.
+#' function [confint.fmx()] does not return the confident intervals of for the constrained parameters.
 #'  
 #' @returns 
-#' [confint.fmx] returns a \link[base]{matrix}
+#' Function [confint.fmx()] returns a \link[base]{matrix}
 #' 
+#' @keywords internal
 #' @importFrom stats confint qnorm
 #' @export confint.fmx
 #' @export
@@ -170,16 +174,17 @@ confint.fmx <- function(object, ..., level = .95) {
 #' 
 #' @details 
 #' 
-#' Function [vcov.fmx] returns 
+#' Function [vcov.fmx()] returns 
 #' the approximate asymptotic variance-covariance \link[base]{matrix} of the user-friendly parameters via delta-method (`parm = 'user'`), 
 #' or the asymptotic variance-covariance matrix of the internal/unconstrained parameters (`parm = 'internal'`). 
 #' When the distribution has constraints on one or more parameters, 
-#' function [vcov.fmx] does not return the variance/covariance involving the constrained parameters.
+#' function [vcov.fmx()] does not return the variance/covariance involving the constrained parameters.
 #' 
 #' @returns 
 #' 
-#' Function [vcov.fmx] returns a \link[base]{matrix}.
+#' Function [vcov.fmx()] returns a \link[base]{matrix}.
 #' 
+#' @keywords internal
 #' @importFrom stats vcov
 #' @export vcov.fmx
 #' @export
@@ -260,15 +265,16 @@ vcov.fmx <- function(object, internal = FALSE, ...) {
 #' 
 #' @details 
 #' 
-#' Function [coef.fmx] returns the estimates of the user-friendly parameters (`parm = 'user'`), 
+#' Function [coef.fmx()] returns the estimates of the user-friendly parameters (`parm = 'user'`), 
 #' or the internal/unconstrained parameters (\code{parm = 'internal'}).
 #' When the distribution has constraints on one or more parameters, 
-#' function [coef.fmx] does not return the estimates (which is constant \code{0}) of the constrained parameters.
+#' function [coef.fmx()] does not return the estimates (which is constant \code{0}) of the constrained parameters.
 #' 
 #' @returns 
 #' 
-#' Function [coef.fmx] returns a \link[base]{numeric} \link[base]{vector}.
+#' Function [coef.fmx()] returns a \link[base]{numeric} \link[base]{vector}.
 #' 
+#' @keywords internal
 #' @importFrom stats coef
 #' @export coef.fmx
 #' @export
@@ -301,15 +307,16 @@ coef.fmx <- function(object, internal = FALSE, ...) {
 #' 
 #' @details 
 #' 
-#' Function [logLik.fmx] returns a \link[stats]{logLik} object indicating the log-likelihood.
+#' Function [logLik.fmx()] returns a \link[stats]{logLik} object indicating the log-likelihood.
 #' An additional attribute `attr(,'logl')` indicates the point-wise log-likelihood, 
 #' to be use in Vuong's closeness test.
 #' 
 #' @returns 
 #' 
-#' Function [logLik.fmx] returns a \link[stats]{logLik} object with 
+#' Function [logLik.fmx()] returns a \link[stats]{logLik} object with 
 #' an additional attribute `attr(,'logl')`.
 #' 
+#' @keywords internal
 #' @importFrom stats logLik
 #' @export logLik.fmx
 #' @export

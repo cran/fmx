@@ -22,7 +22,7 @@
 #' 
 #' @returns 
 #' 
-#' Function [fmx_constraint] returns the indices of internal parameters 
+#' Function [fmx_constraint()] returns the indices of internal parameters 
 #' (only applicable to Tukey \eqn{g}-&-\eqn{h} mixture distribution, yet) to be constrained, 
 #' based on the input \linkS4class{fmx} object `dist`.
 #' 
@@ -80,7 +80,7 @@ fmx_constraint <- function(dist, distname = dist@distname, K = dim(dist@pars)[1L
 #' 
 #' @returns 
 #' 
-#' Function [user_constraint] returns the indices of internal parameters 
+#' Function [user_constraint()] returns the indices of internal parameters 
 #' (only applicable to Tukey's \eqn{g}-&-\eqn{h} mixture distribution, yet) to be constrained, 
 #' based on the type of distribution `distname`, number of components `K`
 #' and a user-specified string (e.g., `c('g2', 'h1')`).
@@ -98,6 +98,7 @@ fmx_constraint <- function(dist, distname = dist@distname, K = dim(dist@pars)[1L
 #' (c2 = fmx_constraint(d2))
 #' user_constraint(distname = 'GH', K = 2L, x = 'g2') # equivalent
 #' 
+#' @keywords internal
 #' @export
 user_constraint <- function(x, distname, K) {
   switch(distname, GH = {
@@ -134,7 +135,7 @@ user_constraint <- function(x, distname, K) {
 #' 
 #' @returns 
 #' 
-#' Function [getTeX] returns a \link[base]{character} scalar 
+#' Function [getTeX()] returns a \link[base]{character} scalar 
 #' (of TeX expression) of the constraint, 
 #' primarily intended for end-users in plots.
 #' 
@@ -149,6 +150,7 @@ user_constraint <- function(x, distname, K) {
 #' (d2 = fmx('GH', A = c(1,4), g = c(.2,0), h = c(.15,.1), w = c(1,1)))
 #' getTeX(d2)
 #' 
+#' @keywords internal
 #' @export
 getTeX <- function(dist, print_K = FALSE) {
   # if (!inherits(dist, what = 'fmx')) stop('do not allow')
@@ -192,8 +194,9 @@ getTeX <- function(dist, print_K = FALSE) {
 #' as well as `stats:::AIC.logLik` and `stats:::BIC.logLik`
 #' 
 #' @returns 
-#' Function [npar.fmx] returns an \link[base]{integer} scalar.
+#' Function [npar.fmx()] returns an \link[base]{integer} scalar.
 #' 
+#' @keywords internal
 #' @export
 npar.fmx <- function(dist) {
   # https://en.wikipedia.org/wiki/Akaike_information_criterion

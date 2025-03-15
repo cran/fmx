@@ -13,13 +13,14 @@
 #' @param ... additional parameters, currently not in use
 #' 
 #' @details
-#' Function [Kolmogorov_fmx] calculates Kolmogorov distance.
+#' Function [Kolmogorov_fmx()] calculates Kolmogorov distance.
 #' 
 #' @returns
-#' Functions [Kolmogorov_fmx], [KullbackLeibler_fmx], [CramerVonMises_fmx] 
+#' Functions [Kolmogorov_fmx()], [KullbackLeibler_fmx()], [CramerVonMises_fmx()] 
 #' all return \link[base]{numeric} scalars.
 #' 
 #' @name fmx_diagnosis
+#' @keywords internal
 #' @export
 Kolmogorov_fmx <- function(object, data = object@data, ...) {
   

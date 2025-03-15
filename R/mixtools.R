@@ -9,11 +9,12 @@
 #' \link[mixtools]{normalmixEM} and \link[mixtools]{gammamixEM} are supported
 #' 
 #' @returns 
-#' Function [mixEM_pars] returns a \link[base]{character} \link[base]{vector}
+#' Function [mixEM_pars()] returns a \link[base]{character} \link[base]{vector}
 #' 
 #' @seealso 
 #' \link[mixtools]{normalmixEM} \link[mixtools]{gammamixEM}
 #' 
+#' @keywords internal
 #' @export
 mixEM_pars <- function(object) {
   switch(object[['ft']], normalmixEM = {
@@ -36,8 +37,9 @@ mixEM_pars <- function(object) {
 #' @param ... additional parameters, currently not in use
 #' 
 #' @returns 
-#' Function [logLik.mixEM] returns a \link[stats]{logLik} object.
+#' Function [logLik.mixEM()] returns a \link[stats]{logLik} object.
 #' 
+#' @keywords internal
 #' @importFrom stats logLik 
 #' @export logLik.mixEM
 #' @export
@@ -78,11 +80,12 @@ logLik.mixEM <- function(object, ...) {
 #' 
 #' @returns 
 #' 
-#' Function [sort.mixEM] returns a `'mixEM'` object.
+#' Function [sort.mixEM()] returns a `'mixEM'` object.
 #' 
 #' @seealso 
 #' \link[base]{sort}
 #' 
+#' @keywords internal
 #' @export sort.mixEM
 #' @export
 sort.mixEM <- function(x, decreasing = FALSE, ...) {

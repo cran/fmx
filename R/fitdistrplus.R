@@ -1,4 +1,10 @@
 
+# packageDate('fitdistrplus')
+# On 2024-07-11
+# authors added ?fitdistrplus:::AIC.fitdist; ?fitdistrplus:::BIC.fitdist
+# I dont think their practice is as good as mine, though
+
+
 #' @title Log-Likelihood of \link[fitdistrplus]{fitdist} Object
 #' 
 #' @description ..
@@ -14,11 +20,12 @@
 #' 
 #' 
 #' @returns 
-#' Function [logLik.fitdist] returns a \link[stats]{logLik} object, which 
+#' Function [logLik.fitdist()] returns a \link[stats]{logLik} object, which 
 #' could be further used by \link[stats]{AIC} and \link[stats]{BIC}.
 #' 
 #' (I have written to the authors)
 #' 
+#' @keywords internal
 #' @importFrom stats logLik
 #' @export logLik.fitdist
 #' @export
@@ -40,8 +47,9 @@ logLik.fitdist <- function(object, ...) {
 #' @param ... additional parameters, currently not in use
 #' 
 #' @returns 
-#' Function [nobs.fitdist] returns an \link[base]{integer} scalar
+#' Function [nobs.fitdist()] returns an \link[base]{integer} scalar
 #' 
+#' @keywords internal
 #' @importFrom stats nobs
 #' @export nobs.fitdist
 #' @export

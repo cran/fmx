@@ -16,7 +16,7 @@ some or all of \code{mean}, \code{sd}, \code{skewness} and \code{kurtosis}
 (length will be recycled), see \link[param2moment]{moment2param}}
 }
 \value{
-Function \link{moment2fmx} returns a \linkS4class{fmx} object.
+Function \code{\link[=moment2fmx]{moment2fmx()}} returns a \linkS4class{fmx} object.
 }
 \description{
 Creates \linkS4class{fmx} Object with Given Component-Wise Moments

@@ -25,11 +25,11 @@ be increasing (\code{FALSE}, default) or decreasing (\code{TRUE})?}
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \link{sort.Normal} returns a \code{'Normal'} object.
+Function \code{\link[=sort.Normal]{sort.Normal()}} returns a \code{'Normal'} object.
 
-Function \link{sort.Skew.normal} returns a \code{'Skew.normal'} object.
+Function \code{\link[=sort.Skew.normal]{sort.Skew.normal()}} returns a \code{'Skew.normal'} object.
 
-Function \link{sort.Skew.t} returns a \code{'Skew.t'} object.
+Function \code{\link[=sort.Skew.t]{sort.Skew.t()}} returns a \code{'Skew.t'} object.
 }
 \description{
 To sort an object returned from package \CRANpkg{mixsmsn} by its location parameters
@@ -40,3 +40,4 @@ To sort an object returned from package \CRANpkg{mixsmsn} by its location parame
 \seealso{
 \link[base]{sort}
 }
+\keyword{internal}

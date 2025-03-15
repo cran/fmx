@@ -30,3 +30,4 @@ for \linkS4class{fmx} objects.
 d[1:2]
 
 }
+\keyword{internal}

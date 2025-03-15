@@ -16,7 +16,7 @@ returned from \link[mixsmsn]{smsn.mix} with parameter
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \link{as.fmx.Skew.t} returns an \linkS4class{fmx} object.
+Function \code{\link[=as.fmx.Skew.t]{as.fmx.Skew.t()}} returns an \linkS4class{fmx} object.
 }
 \description{
 To convert \code{Skew.t} object (from package \CRANpkg{mixsmsn})
